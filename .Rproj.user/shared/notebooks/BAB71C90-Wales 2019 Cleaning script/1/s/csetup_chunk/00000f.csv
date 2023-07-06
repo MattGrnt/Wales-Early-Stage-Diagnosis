@@ -1,4 +1,28 @@
 "0","knitr::opts_chunk$set(echo = TRUE)"
+"2","Warning message:
+"
+"2","In file.info(path, extra_cols = FALSE) :"
+"2","
+ "
+"2"," cannot open file 'C:/Users/grant22/AppData/Local/Microsoft/WindowsApps/PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0/python.exe': The file cannot be accessed by the system
+"
 "0","library(tidyverse)"
+"2","Warning: package ‘tibble’ was built under R version 4.0.5"
+"2","Warning: package ‘tidyr’ was built under R version 4.0.5"
+"2","Warning: package ‘readr’ was built under R version 4.0.5"
+"2","Warning: package ‘purrr’ was built under R version 4.0.5"
+"2","Warning: package ‘dplyr’ was built under R version 4.0.5"
+"2","Warning: package ‘stringr’ was built under R version 4.0.5"
+"2","Warning: package ‘lubridate’ was built under R version 4.0.5"
+"2","-- [1mAttaching core tidyverse packages[22m -------------------------------------------------------------------------------------------------------------------------------------------------------------------- tidyverse 2.0.0 --
+[32m√[39m [34mdplyr    [39m 1.0.8     [32m√[39m [34mreadr    [39m 2.1.2
+[32m√[39m [34mforcats  [39m 1.0.0     [32m√[39m [34mstringr  [39m 1.4.0
+[32m√[39m [34mggplot2  [39m 3.3.6     [32m√[39m [34mtibble   [39m 3.1.6
+[32m√[39m [34mlubridate[39m 1.8.0     [32m√[39m [34mtidyr    [39m 1.2.0
+[32m√[39m [34mpurrr    [39m 0.3.4     "
+"2","-- [1mConflicts[22m -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- tidyverse_conflicts() --
+[31mx[39m [34mdplyr[39m::[32mfilter()[39m masks [34mstats[39m::filter()
+[31mx[39m [34mdplyr[39m::[32mlag()[39m    masks [34mstats[39m::lag()
+[36mi[39m Use the [conflicted package](http://conflicted.r-lib.org/) to force all conflicts to become errors"
 "0","library(readxl)"
-"0",""
+"2","Warning: package ‘readxl’ was built under R version 4.0.5"

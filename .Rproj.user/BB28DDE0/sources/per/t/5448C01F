@@ -3,7 +3,7 @@
     "path": "~/Wales Early Stage Diagnosis/Wales 2019 Cleaning script.Rmd",
     "project_path": "Wales 2019 Cleaning script.Rmd",
     "type": "r_markdown",
-    "hash": "0",
+    "hash": "2654441865",
     "contents": "",
     "dirty": false,
     "created": 1687869277699.0,
@@ -24,11 +24,11 @@
         "docOutlineSize": "94"
     },
     "folds": "",
-    "lastKnownWriteTime": 1688551284,
+    "lastKnownWriteTime": 1688647418,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1688646598773,
+    "last_content_update": 1688647419159,
     "read_only": false,
     "read_only_alternatives": []
 }
