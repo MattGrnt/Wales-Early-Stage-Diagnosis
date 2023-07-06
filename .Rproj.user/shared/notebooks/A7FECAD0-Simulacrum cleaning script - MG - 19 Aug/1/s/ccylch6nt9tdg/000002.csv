@@ -1,0 +1,4 @@
+"0","```r
+table(full_dataset$LATERALITY)
+#1548035 records labelled as \"9\" - need to change to \"na\"
+```"

@@ -1,0 +1,46 @@
+"0","```r
+
+#How many patients had a surgery at all?
+
+surgery_num <- test %>%
+  filter(DATE_FIRST_SURGERY != is.na(DATE_FIRST_SURGERY)) %>% 
+  nrow()
+surgery_num
+#1,487,161 had surgery
+
+no_surgery_num  <- sum(is.na(test$DATE_FIRST_SURGERY))1
+no_surgery_num
+#884,120 had no surgery
+
+#double check you have correct amount
+total <- nrow(surgery_num) + no_surgery_num
+total
+
+#percent of patients in dataset that had surgery:
+surgery_num / total * 100
+#62.7% 
+#This is ~10% higher than we'd expect according to https://www.cancerdata.nhs.uk/treatments
+
+
+#how many patients have a surgery before their diagnosis?
+Pre_diagnosis_surgery <- test %>%
+  filter(DATE_FIRST_SURGERY < DIAGNOSISDATEBEST) %>%
+  select(PATIENTID, DATE_FIRST_SURGERY,DIAGNOSISDATEBEST)
+nrow(Pre_diagnosis_surgery)
+#3,340
+
+#How many patients have a diagnosis on the same date as their surgery
+Same_date_diagnosis_surgery <- test %>% 
+  filter(DATE_FIRST_SURGERY == DIAGNOSISDATEBEST) %>%
+  select(PATIENTID, DATE_FIRST_SURGERY, DIAGNOSISDATEBEST)
+nrow(Same_date_diagnosis_surgery)
+#929,501
+
+#percent of patients in dataset that had surgery same day or after their diagnosis:
+(surgery_num - nrow(Pre_diagnosis_surgery)) / total * 100
+#62.6%
+
+#Percent of patients in dataset that had surgery after their diagnosis:
+(surgery_num - nrow())
+
+```"

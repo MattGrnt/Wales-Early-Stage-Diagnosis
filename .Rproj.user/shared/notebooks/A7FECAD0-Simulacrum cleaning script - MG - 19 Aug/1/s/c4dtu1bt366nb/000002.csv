@@ -1,0 +1,31 @@
+"0","```r
+```r
+#Join the two datasets
+full_dataset <- full_join(sim_av_patient, sim_av_tumour, by = \PATIENTID\)
+```
+```"
+"1","[1] 0
+"
+"0","```r
+#Check how many unique Patient IDs there are
+n_distinct(full_dataset$PATIENTID)
+```"
+"1","[1] 2200626
+"
+"0","```r
+#2,200,626 <- the same number as there are patients. So do some patients have two tumour records?
+#Make a frequency table and count how many are >1
+PATIENTID_freq <- table(full_dataset$PATIENTID, useNA = \"always\")
+unique_patient_count <- PATIENTID_freq[PATIENTID_freq > 1]
+length(unique_patient_count)
+```"
+"1","[1] 157602
+"
+"0","```r
+#Result -- 157,602 patients have more than 1 tumour recorded against their patient ID
+table(table(full_dataset$PATIENTID))
+```"
+"1","
+      1       2       3       4       5       6       7       8 
+2043024  145613   11025     879      74       8       2       1 
+"

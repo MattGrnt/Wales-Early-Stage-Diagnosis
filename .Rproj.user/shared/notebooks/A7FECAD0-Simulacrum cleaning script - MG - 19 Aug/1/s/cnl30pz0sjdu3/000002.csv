@@ -1,0 +1,34 @@
+"0","```r
+sim_av_tumour <- read_csv(\"sim_av_tumour.csv\")
+
+```"
+"1","One or more parsing issues, see `problems()` for details[1mRows: [22m[34m2371281[39m [1mColumns: [22m[34m34[39m[36m--[39m [1mColumn specification[22m [36m--------------------------------------------------------------------------------------------------[39m
+[1mDelimiter:[22m \",\"
+[31mchr[39m  (16): SITE_ICD10_O2, SITE_ICD10_O2_3CHAR, T_BEST, N_BEST, M_BEST, STAGE_BEST, GRADE, CREG_CODE, ER_STATUS, PR_STA...
+[32mdbl[39m  (16): TUMOURID, PATIENTID, MORPH_ICD10_O2, BEHAVIOUR_ICD10_O2, STAGE_BEST_SYSTEM, AGE, SEX, LINKNUMBER, SCREENING...
+[34mdate[39m  (2): DIAGNOSISDATEBEST, DATE_FIRST_SURGERY
+[36mi[39m Use `spec()` to retrieve the full column specification for this data.
+[36mi[39m Specify the column types or set `show_col_types = FALSE` to quiet this message.
+"
+"0","```r
+sim_av_tumour <- read_csv(\"sim_av_tumour.csv\")
+```"
+"1","One or more parsing issues, see `problems()` for details[1mRows: [22m[34m2371281[39m [1mColumns: [22m[34m34[39m[36m--[39m [1mColumn specification[22m [36m--------------------------------------------------------------------------------------------------[39m
+[1mDelimiter:[22m \",\"
+[31mchr[39m  (16): SITE_ICD10_O2, SITE_ICD10_O2_3CHAR, T_BEST, N_BEST, M_BEST, STAGE_BEST, GRADE, CREG_CODE, ER_STATUS, PR_STA...
+[32mdbl[39m  (16): TUMOURID, PATIENTID, MORPH_ICD10_O2, BEHAVIOUR_ICD10_O2, STAGE_BEST_SYSTEM, AGE, SEX, LINKNUMBER, SCREENING...
+[34mdate[39m  (2): DIAGNOSISDATEBEST, DATE_FIRST_SURGERY
+[36mi[39m Use `spec()` to retrieve the full column specification for this data.
+[36mi[39m Specify the column types or set `show_col_types = FALSE` to quiet this message.
+"
+"0","```r
+sim_av_patient <- read_csv(\"sim_av_patient.csv\")
+```"
+"1","[1mRows: [22m[34m2200626[39m [1mColumns: [22m[34m12[39m[36m--[39m [1mColumn specification[22m [36m--------------------------------------------------------------------------------------------------[39m
+[1mDelimiter:[22m \",\"
+[31mchr[39m  (8): ETHNICITY, DEATHCAUSECODE_1A, DEATHCAUSECODE_1B, DEATHCAUSECODE_1C, DEATHCAUSECODE_2, DEATHCAUSECODE_UNDERLY...
+[32mdbl[39m  (3): PATIENTID, SEX, LINKNUMBER
+[34mdate[39m (1): VITALSTATUSDATE
+[36mi[39m Use `spec()` to retrieve the full column specification for this data.
+[36mi[39m Specify the column types or set `show_col_types = FALSE` to quiet this message.
+"

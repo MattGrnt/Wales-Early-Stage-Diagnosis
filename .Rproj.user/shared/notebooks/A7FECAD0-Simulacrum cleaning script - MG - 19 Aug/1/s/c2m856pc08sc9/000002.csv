@@ -1,0 +1,4 @@
+"0","```r
+table(full_dataset$SCREENINGSTATUSFULL_CODE)
+
+```"

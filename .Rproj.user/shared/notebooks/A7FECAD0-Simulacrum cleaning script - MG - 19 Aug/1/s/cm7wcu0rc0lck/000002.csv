@@ -1,0 +1,24 @@
+"0","```r
+wait_time <- test %>%
+  #filter(Surgery == \"Surgery more than 1 day before diagnosis\") %>%
+  select(DIAGNOSISDATEBEST, DATE_FIRST_SURGERY) %>%
+  mutate(Surgery_diagnosis_diff = DATE_FIRST_SURGERY - DIAGNOSISDATEBEST)
+wait_time
+
+wait_time_filtered <- wait_time %>%
+  filter(Surgery_diagnosis_diff < 365) %>%
+  filter(Surgery_diagnosis_diff > -365)
+wait_time_filtered
+table(wait_time$Surgery_diagnosis_diff)
+
+  
+df1 <- filter(wait_time, Surgery_diagnosis_diff != is.na(Surgery_diagnosis_diff))
+max_wait <- max(df1$Surgery_diagnosis_diff)
+min_wait <- min(df1$Surgery_diagnosis_diff)
+min_wait
+filter(wait_time, Surgery_diagnosis_diff == max_wait)
+filter(wait_time, Surgery_diagnosis_diff == min_wait)       
+
+ggplot(wait_time_filtered) + 
+  geom_histogram(aes(x = Surgery_diagnosis_diff), binwidth = 10)
+```"

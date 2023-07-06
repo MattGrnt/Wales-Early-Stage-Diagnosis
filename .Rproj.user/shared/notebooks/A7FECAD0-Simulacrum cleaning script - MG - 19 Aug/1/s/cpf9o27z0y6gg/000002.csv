@@ -1,0 +1,7 @@
+"0","```r
+head(full_dataset$DIAGNOSISDATEBEST)
+
+#stored in YYYY-MM-DD format - change to just YYYY
+full_dataset <- full_dataset %>%
+  mutate(DIAGNOSIS_YEAR = substring(full_dataset$DIAGNOSISDATEBEST, 1, 4))
+```"

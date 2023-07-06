@@ -1,0 +1,9 @@
+"0","```r
+df <- full_dataset %>%
+  filter(VITALSTATUSDATE == DATE_FIRST_SURGERY) %>%
+  filter(NEWVITALSTATUS == \"D\") %>%
+  select(PATIENTID, VITALSTATUSDATE, NEWVITALSTATUS, DATE_FIRST_SURGERY)
+head(df)
+
+#Yup, 6 patients
+```"

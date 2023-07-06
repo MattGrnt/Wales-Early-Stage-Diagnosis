@@ -1,0 +1,19 @@
+"0","```r
+test <- full_dataset
+test <- test %>%
+    mutate(MONTH_SURGERY_STATUS = case_when(DATE_FIRST_SURGERY <= (DIAGNOSISDATEBEST-30) ~ 0,
+                                          DATE_FIRST_SURGERY > (DIAGNOSISDATEBEST-30) ~ 1,
+                                          DATE_FIRST_SURGERY = is.na(DATE_FIRST_SURGERY) ~ 0))
+
+table(test$MONTH_SURGERY_STATUS)
+prop.table(table(test$MONTH_SURGERY_STATUS))
+#Based on above numbers, should have 1486718 patients with a 1 flag - which we do
+
+test <- test %>%
+  mutate(SURGERY_STATUS = case_when(DATE_FIRST_SURGERY > DIAGNOSISDATEBEST ~ 1,
+                                    DATE_FIRST_SURGERY <= DIAGNOSISDATEBEST ~ 0,
+                                    DATE_FIRST_SURGERY = is.na(DATE_FIRST_SURGERY) ~ 0))
+
+table(test$SURGERY_STATUS)
+prop.table(table(test$SURGERY_STATUS))
+```"

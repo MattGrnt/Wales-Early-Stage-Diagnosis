@@ -1,0 +1,11 @@
+"0","```r
+total
+png(\"age_breakdown.png\")
+```"
+"0","```r
+print(total)
+dev.off()
+```"
+"1","png 
+  2 
+"

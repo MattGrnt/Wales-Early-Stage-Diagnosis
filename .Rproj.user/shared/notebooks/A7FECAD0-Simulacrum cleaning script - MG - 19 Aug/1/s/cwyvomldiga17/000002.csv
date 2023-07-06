@@ -1,0 +1,7 @@
+"0","```r
+df <- test %>%
+  filter(DATE_FIRST_SURGERY != \"\") %>%
+  filter(DATE_FIRST_SURGERY < DIAGNOSISDATEBEST) %>%
+  select(DATE_FIRST_SURGERY, DIAGNOSISDATEBEST)
+glimpse(df)
+```"

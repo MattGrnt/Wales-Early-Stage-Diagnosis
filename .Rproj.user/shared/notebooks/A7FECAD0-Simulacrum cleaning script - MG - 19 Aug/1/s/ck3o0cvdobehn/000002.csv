@@ -1,0 +1,26 @@
+"0","```r
+```r
+#read in 
+ICD_Codes <- read_excel(\Dim_CancerSite.xlsx\, sheet = NULL, range = NULL)
+New_ICD_Codes <- ICD_Codes %>%
+  select(CancerSiteKey, CancerSiteLevel3Code, CancerSiteLevel3Desc, CancerSiteLevel3CodeDesc, CancerSiteLevel3PublishDesc)
+head(New_ICD_Codes)
+
+#left join on CancerSiteKey and SITE_ICD10_O2 (dont want to bring across codes from our dictionary that arent in our dataset)
+#NOTE - it is SITE_ICD10_O2 NOT SITE_ICD10_02 (an upper case o before the 2)
+
+full_dataset <- left_join(full_dataset, New_ICD_Codes, by = c(\SITE_ICD10_O2\ = \CancerSiteKey\))
+
+
+#Check if there are codes that aren't cancer
+
+sum(is.na(full_dataset$CancerSiteLevel3Desc))
+
+#1037 records where this is the case. Lars suggested \only using the first letter. So 'I11.9' just becomes 'I'\ - So make a new column with just first letter from SITE_ICD10_O2
+
+full_dataset <- full_dataset %>%
+  mutate(ICD10_INITIAL = substring(full_dataset$SITE_ICD10_O2, 1, 1))
+table(full_dataset$ICD10_INITIAL)
+
+```
+```"
